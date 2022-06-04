@@ -1,0 +1,45 @@
+
+section{
+    background-color: palevioletred;
+    height: 50vh;
+}
+
+.card{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.nav-link{
+    margin-right: 100px;;
+}
+
+.below_nav{
+    margin-right: 50px;
+}
+
+.Cancer{
+    font-size: 5rem;
+    color: palevioletred;
+}
+.middle_column{
+    margin-right: 106px;
+}
+
+.Our_Fighters{
+    color: palevioletred;
+}
+
+.img1{
+    height: 40rem;
+    width: 33rem;
+}
+.img2{
+    /* margin-right: 100px; */
+    height: 40rem;
+    width: 20rem;
+}
+.img3{
+    margin-top: 73px;
+    height: 20rem;
+    width: 33rem;
+}
