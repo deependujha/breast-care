@@ -2,13 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    {{>head}}
 </head>
 
 <body>
@@ -17,53 +11,24 @@
         <div class="mt-0">
 
             <div class="card " style="height: 90vh;">
-                <nav class="navbar navbar-expand-lg mt-5">
-                    <div class="container-fluid">
-                        <!-- <a class="navbar-brand ms-5" href="#">Navbar</a> -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-5 ">
-                                <li class="nav-item ">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link active" href="#">Link</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link active" href="#">Link</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link active" href="#">Link</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link active" href="#">Link</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-
+                {{>navbar}}
                 <div class="below_nav my-5">
                     <div class="row">
                         <div class="col text-center">
                             
                             <p class="fw-bold Our_Fighters">Our Fighters</p>
-                            <img src="Juliya.jpg" class="img2" alt="...">
+                            <img src="/assets/images/Juliya.jpg" class="img2" alt="...">
                         </div>
                         <div class="col middle_column">
                             <h1 class="mt-5">Fight</h1>
                             <h1>Against</h1>
                             <p class="mt-5 Cancer">Cancer</p>
 
-                            <img src="After 2.jpeg" class="img3" alt="...">
+                            <img src="/assets/images/After 2.jpeg" class="img3" alt="...">
 
                         </div>
                         <div class="col text-center">
-                            <img src="After 1.jpeg" class="img1" alt="...">
+                            <img src="/assets/images/After 1.jpeg" class="img1" alt="...">
                         </div>
                     </div>
                 </div>
