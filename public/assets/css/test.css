@@ -1,0 +1,30 @@
+
+.testimonial-page{
+    display: flex;
+}
+
+.card-img1{
+    border-radius: 131px;
+}
+
+.rotate {
+    transform: rotate(15deg);
+  }
+
+
+.testimonial{
+    color: palevioletred;
+    margin-left: 250px;
+}
+
+
+.card_testimonial{
+    background-color: palevioletred;
+}
+
+.card-img2{
+    height: 181px;
+    width: 178px;
+    margin-left: 63px;
+    margin-top: 10px;
+}
