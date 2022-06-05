@@ -1,4 +1,4 @@
-# Breast-Care ![plot](public/assets/images/logo.png)
+# Breast-Care ![logo](pics_for_readme_md/logo.png)
 This project was made for **'Hackfest'** a hackathon organized by **['CodeDamn'](https://codedamn.com/)**. We, **"Fate Twisters"**, a team of three undergrads, [Amit Kumar Mahato](https://github.com/weaponxwolf), [Deependu Jha](https://github.com/deependujha), and [Nitesh Kumar](https://github.com/niteshKrr) took part in this hackathon and did our best to complete this project in 36 hours (even less than 2 days).
 <br/>
 <br/>
@@ -11,3 +11,33 @@ The project is regarding, others/ people who suffered or went through the horrif
 
  ## Tech-stacks used
 We have used **Express.js** as backend framework, **MongoDB atlas** as database, and **HBS** as view engine and renderer.
+
+
+ ## Project
+ - **'Home page'** is a simple static page which greets users with a positive mindset to fight against Breast-Cancer, and not to give up.
+
+![home page](pics_for_readme_md/home.png)
+ 
+ - **'Share your Story'** page is about fighters sharing their own story, and motivating others how they defeated the evil and got back to their normal life after slaying the life-threatning monster. Uploading image is optional, but we highly encourage to do so. People relate with others less with their names, and more with their face.
+![share you story](pics_for_readme_md/inspire_others.png)
+
+ - **'Get Inspired'** is where you will meet our fighters, our brave ladies who dared to fight against cancer and are also willing to share their story, so others don't give up and fight with it with courage. When you click on a person, you can see detailed view of her thoughts.
+![get inspired](pics_for_readme_md/fighters.png)
+![get details](pics_for_readme_md/fighter_details.png)
+
+ - **'Check Up'** is the destination to interact with our machine learing classification model. User fills in the required data, and then logistics regression predicts whether the data belongs to a person with benign or malignant tumor. 
+![Check Up](pics_for_readme_md/checkup.png)
+
+ - **'Know More'** is the perfect place to learn more about breast cancer.
+![know more](pics_for_readme_md/know_more.png)
+
+- **'FAQs'** is regarding the general questions one tends to have in their mind.
+![FAQs](pics_for_readme_md/faqs.png)
+
+## Breast-Cancer prediction model
+  
+
+  
+
+
+
