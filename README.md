@@ -40,13 +40,12 @@ Dataset used for modeling is `Breast cancer wisconsin (diagnostic) dataset`.
  - Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
  - Donor: Nick Street
  - Date: November, 1995
-<br/>
 This dataset is present in Sci-kit Learn module and the logistic regression used uses 'binary cross entropy(log loss)' as loss function. The model predicts 0 or 1.
- - 0 stands for `Malignant`
- - 1 stands for `Benign`
- - Malignant is generally considered to be dangerous.
+ * 0 stands for Malignant
+ * 1 stands for Benign
+ * Malignant is generally considered to be dangerous.
 <br/>
-We were unable in writing logistics regression in javascript, and as Django was not allowed. So, Figured our another route, node files calls python file, and python file returns the prediction to node file and thus shows output as per required.
+We were unable in writing logistics regression in javascript, and as Django was not allowed. So, we figured out another route; node files calls python file, and python file returns the prediction to node file and thus shows output as per required.
 
 ## How to setup the project?
 To setup the project:
