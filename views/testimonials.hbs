@@ -4,6 +4,14 @@
 <head>
     {{>head}}
     <link rel="stylesheet" href="/assets/css/test.css">
+    <style>
+        .card {
+            cursor: pointer;
+        }
+        img{
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -11,17 +19,23 @@
     {{>navbar}}
     <section class="testimonial-page py-5">
 
-        <div class="row" style="height: 40vh;background-color: rgb(255, 255, 255);width: 100vw;display: flex;justify-content:center;align-items: center;">
-            <div style="background-color:#ff0558;height: 90%;width: 90%;border-radius: 1rem;box-shadow: 0.5rem 0.5rem 1rem gray;color: white;">
+        <div class="row"
+            style="height: 40vh;background-color: rgb(255, 255, 255);width: 100vw;display: flex;justify-content:center;align-items: center;">
+            <div
+                style="background-color:#ff0558;height: 90%;width: 90%;border-radius: 1rem;box-shadow: 0.5rem 0.5rem 1rem gray;color: white;">
                 <div class="row">
                     <div class="col-3" style="display: flex;justify-content: center;align-items: center;">
-                        <img src="/assets/images/inspire.jpg" style="max-width: 90%;max-height:90%;display:block;border-radius: 1rem;" alt="">
+                        <img src="/assets/images/inspire.jpg"
+                            style="max-width: 90%;max-height:35vh;display:block;padding: 1rem; border-radius:1rem "
+                            alt="">
                     </div>
                     <div class="col-8">
                         <div style="padding: 1rem">
                             <h3>Name</h3>
                             <hr>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque ad, excepturi adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus perspiciatis consectetur odio quo alias quia voluptatem!</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque ad, excepturi
+                                adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus
+                                perspiciatis consectetur odio quo alias quia voluptatem!</p>
                         </div>
                     </div>
                 </div>
@@ -32,19 +46,11 @@
 
     <section>
 
-
-        <div class="container py-5 card_testimonial">
+        <div class="container py-5 card_testimonial text-center" style="text-overflow:ellipsis;">
             <h3 class="text-center fw-bold text-white">Meet Our Warriers </h3>
-
-            <div class="card-group my-4 text-center py-5" id="testimonials">
-
-          
-
-
-
+            <div class="card-group my-4 text-center py-5" id="testimonials1">
 
             </div>
-
         </div>
 
     </section>
@@ -59,16 +65,26 @@
     <script>
         $(document).ready(function () {
             $.get('/testimonials/list', (data, status) => {
+                var lengthOfStories = data.length;
+                var i = 0,
+                    j = 1;
                 data.forEach(story => {
-                    $("#testimonials").append(`<div class="card mx-3" style="border-radius: 5px;  height: 25rem;">
+                    i++;
+                    $("#testimonials" + j).append(`<div class="card mx-3" style="border-radius: 5px;  height: 25rem;padding:1rem">
                     <img src="/assets/images/inspire.jpg" class="card-img2" alt="loading..."
-                        style="border-radius: 100px;">
-                    <div class="card-body">
+                        style="border-radius: 100px;margin:0 auto;">
+                    <div class="card-body" style="overflow:hidden">
                         <h5 class="card-title">${story.creator}</h5>
                         <p class="card-text">${story.age}, ${story.occupation}</p>
-                        <p class="card-text">${story.story}</p>
+                        <p class="card-text">${story.story}...</p>
                     </div>
                 </div>`);
+                    if (i % 4 == 0) {
+                        j++;
+                        $(".card_testimonial").append(
+                            `<div class="card-group my-4 text-center py-5" style="background-color: #cb4c81" id="testimonials${j}"></div>`
+                            );
+                    }
                 });
 
             });

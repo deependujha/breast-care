@@ -47,7 +47,7 @@ app.post('/yourstory', async (req, res) => {
     const story=await new Stories(req.body);
     story.save();
     console.log(story);
-    res.send("OK");
+    res.render('yourstory')
   } catch (error) {
 
   }
