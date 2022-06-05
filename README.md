@@ -36,8 +36,29 @@ We have used **Express.js** as backend framework, **MongoDB atlas** as database,
 
 ## Breast-Cancer prediction model
   
+Dataset used for modeling is `Breast cancer wisconsin (diagnostic) dataset`.
+ - Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
+ - Donor: Nick Street
+ - Date: November, 1995
+<br/>
+This dataset is present in Sci-kit Learn module and the logistic regression used uses 'binary cross entropy(log loss)' as loss function. The model predicts 0 or 1.
+ - 0 stands for `Malignant`
+ - 1 stands for `Benign`
+ - Malignant is generally considered to be dangerous.
+<br/>
+We were unable in writing logistics regression in javascript, and as Django was not allowed. So, Figured our another route, node files calls python file, and python file returns the prediction to node file and thus shows output as per required.
 
+## How to setup the project?
+To setup the project:
+- simply clone the repo.
+- move inside the breast-care directory.
+- make sure you have python3 installed and sklearn. (pip install sklearn)
+- run `npm i` to get node_modules.
+- run `node server.js` to start the project
   
+#### Thanks.
+
+
 
 
 
