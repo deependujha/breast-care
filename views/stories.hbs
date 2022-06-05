@@ -81,7 +81,12 @@
 </div>
 
 </section>`);
-                $("#storyimage").attr('src', '/stories/images/' + story.imageAddress);
+                if (story.imageAddress) {
+                    $("#storyimage").attr('src', '/stories/images/' + story.imageAddress);
+                }else{
+                    $("#storyimage").attr('src', '/assets/images/default-woman.jpeg');
+                }
+
                 window.location.href = "#websitename";
             });
 

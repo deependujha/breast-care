@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BreastCare</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/logo.png">
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    {{>navbar}}
+    <div class="container">
+        {{#ifEquals message "YES"}}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Congratulations! </strong> You Are SAFE.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/ifEquals}}
+        {{#ifEquals message "NO"}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Sorry!</strong> You should consult a Doctor.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {{/ifEquals}}
+
+
+    </div>
+
+    <section class="joining-page py-5">
+        <h1 class="text-center fw-bold Inspire_Others" style="color: #e72f6b">Self Check Up</h1>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-8 ">
+                    <div class="join_us-left">
+                        <form action="#" method="POST" enctype="multipart/form-data">
+                            <div class="row ">
+                                <div class="col-md ">
+                                    <label for="name">Radius</label>
+                                    <input name="radius" type="number" min="6.981" max="28.11"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 6.981 , MAX - 28.11" step=".001" required>
+                                </div>
+                                <div class="col-md ">
+                                    <label for="name">Texture</label>
+                                    <input name="texture" type="number" min="9.71" max="239.28"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 9.71 , MAX - 39.28" id="name" step=".001" required>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md ">
+                                    <label for="name">Perimeter</label>
+                                    <input name="perimeter" type="number" min="43.79" max="118.5"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 43.79 , MAX - 188.5" id="name" step=".001" required>
+                                </div>
+                                <div class="col-md ">
+                                    <label for="name">Area</label>
+                                    <input name="area" type="number" min="143.5" max="2501"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 143.5 , MAX - 2501 " id="name" step=".001" required>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md ">
+                                    <label for="name">Smoothness</label>
+                                    <input name="smoothness" type="number" min="0.053" max="0.163"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.053 , MAX - 0.163 " id="name" step=".001" required>
+                                </div>
+                                <div class="col-md ">
+                                    <label for="name">Compactness </label>
+                                    <input name="compactness" type="number" min="0.019" max="0.345"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.019 , MAX - 0.345 " id="name" step=".001" required>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md ">
+                                    <label for="name">Concavity</label>
+                                    <input name="concavity" type="number" min="0.0" max="0.427"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.0 , MAX - 0.427 " id="name" step=".001" required>
+                                </div>
+                                <div class="col-md ">
+                                    <label for="name">Concave Points</label>
+                                    <input name="concave_points" type="number" min="0.0" max="0.201"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.0 , MAX - 0.201 " id="name" step=".001" required>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md ">
+                                    <label for="name">Symmetry</label>
+                                    <input name="symmetry" type="number" min="0.106" max="0.304"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.106 , MAX - 0.304 " id="name" step=".001" required>
+                                </div>
+                                <div class="col-md ">
+                                    <label for="name">Fractal Dimension</label>
+                                    <input name="fractal_dimension" type="number" min="0.05" max="0.097"
+                                        class="form-control shadow p-3 mb-5 bg-body rounded"
+                                        placeholder="MIN - 0.05 , MAX - 0.097 " id="name" step=".001" required>
+                                </div>
+                            </div>
+
+
+
+                            <button type="submit" id="btn" class="btn btn-outline-info">Start Check Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="join_us-right mt-2">
+                        <div class="text ms-4 ">
+                            <img src="/assets/images/woman-checkup.jpg" style="border-radius: 1rem;max-width:30vw"
+                                alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

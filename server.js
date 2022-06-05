@@ -4,9 +4,12 @@ const hbs = require('hbs');
 const async = require('hbs/lib/async');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
+const {
+  spawn
+} = require('child_process')
 const path = require('path')
 const app = express()
-const port = 5000
+const port = 3000
 
 const Stories = require('./models/stories');
 const {
@@ -23,7 +26,9 @@ app.use(fileUpload({
   tempFileDir: path.join(__dirname, 'public/tmp')
 }))
 hbs.registerPartials(__dirname + '/views/partials');
-
+hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -35,6 +40,50 @@ app.get('/yourstory', (req, res) => {
 
 app.get('/stories', (req, res) => {
   res.render('stories');
+})
+
+app.get('/checkup', (req, res) => {
+  res.render('checkup');
+})
+
+app.post('/checkup', (req, res) => {
+  try {
+    const childPython = spawn("python3", ["ml_model/breast_cancer_prediction.py",
+      req.body.radius,
+      req.body.texture,
+      req.body.perimeter,
+      req.body.area,
+      req.body.smoothness,
+      req.body.compactness,
+      req.body.concavity,
+      req.body.concave_points,
+      req.body.symmetry,
+      req.body.fractal_dimension
+    ]);
+
+
+    childPython.stdout.on("data", (data) => {
+      if (parseInt(data)==1) {
+        res.render('checkup',{
+          message : "YES"
+        });
+      }else{
+        res.render('checkup',{
+          message : "NO"
+        });
+      }
+      
+    });
+    childPython.stderr.on("data", (data) => {
+      console.log(`stderr : ${data}`);
+    });
+    // childPython.on("close", (code) => {
+    //   console.log(`${code}`);
+    // });
+    
+  } catch (error) {
+    console.log(error);
+  }
 })
 
 
