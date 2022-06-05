@@ -32,6 +32,15 @@ app.get('/testimonials', (req, res) => {
   res.render('testimonials');
 })
 
+app.get('/testimonials/list',async(req,res)=>{
+  try {
+    const testimonials=await Stories.find();
+    res.send(testimonials);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 app.post('/yourstory', async (req, res) => {
   try {
     console.log(req.body);
