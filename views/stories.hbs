@@ -4,6 +4,12 @@
 <head>
     {{>head}}
     <link rel="stylesheet" href="/assets/css/test.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kanit:wght@500&family=Montserrat:wght@500&display=swap"
+        rel="stylesheet">
+
     <style>
         .card {
             cursor: pointer;
@@ -64,7 +70,7 @@
             </div>
             <div class="col-8">
                 <div style="padding: 1rem;">
-                    <h3 id="creatorname">${story.creator}</h3>
+                    <h3 id="creatorname" style="font-family: 'Dancing Script', cursive;">${story.creator}</h3>
                     <p>${story.age}, ${story.occupation}</p>
                     <hr>
                     <p id="fullstory" class="sc1" style="height:20vh;overflow-y:scroll;">${story.story}</p>
@@ -102,7 +108,7 @@
                         <p class="card-text">${story.story}...</p>
                     </div>
                 </div>`);
-                    if (i % 4 == 0) {
+                    if (i % 3 == 0) {
                         j++;
                         $(".card_testimonial").append(
                             `<div class="card-group my-4 text-center py-5" style="background-color: #cb4c81" id="testimonials${j}"></div>`
