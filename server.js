@@ -54,6 +54,14 @@ app.post('/yourstory', async (req, res) => {
 
 })
 
+app.get('/know-more',(req,res)=>{
+  res.render('know-more');
+})
+
+app.get('/Questions-asked-frequently',(req,res)=>{
+  res.render('QnA');
+})
+
 app.listen(port, () => {
   console.log(`App Listening at http://localhost:${port}`)
 })
