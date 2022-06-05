@@ -1,28 +1,35 @@
+.nav-link {
+    margin-right: 100px;
+}
 
-.testimonial-page{
+.below_nav {
+    margin-right: 40px;
+}
+
+.testimonial-page {
     display: flex;
 }
 
-.card-img1{
-    border-radius: 131px;
+.card-img1 {
+    border-radius: 30rem;
 }
 
 .rotate {
-    transform: rotate(15deg);
-  }
+    transform: rotate(5deg);
+}
 
 
-.testimonial{
-    color: palevioletred;
+.testimonial {
+    color: #da2e67;
     margin-left: 250px;
 }
 
 
-.card_testimonial{
-    background-color: palevioletred;
+.card_testimonial {
+    background-color: rgb(221, 58, 112);
 }
 
-.card-img2{
+.card-img2 {
     height: 181px;
     width: 178px;
     margin-left: 63px;
