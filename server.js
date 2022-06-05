@@ -79,9 +79,9 @@ app.post('/yourstory', async (req, res) => {
     }
     image.mv(path.join(__dirname, "public/stories/images", filename));
     story.imageAddress = filename;
-    console.log(story);
+    // console.log(story);
     await story.save();
-    // res.redirect('/stories')
+    res.redirect('/stories')
   } catch (error) {
     console.log(error);
   }

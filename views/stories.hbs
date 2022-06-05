@@ -12,39 +12,16 @@
         img {
             cursor: pointer;
         }
+
     </style>
 </head>
 
 <body>
 
     {{>navbar}}
-    <section class="testimonial-page py-5">
+    <div id="showstories">
 
-        <div class="row"
-            style="height: 40vh;background-color: rgb(255, 255, 255);width: 100vw;display: flex;justify-content:center;align-items: center;">
-            <div
-                style="background-color:#ff0558;height: 90%;width: 90%;border-radius: 1rem;box-shadow: 0.5rem 0.5rem 1rem gray;color: white;">
-                <div class="row" id="stories">
-                    <div class="col-3" style="display: flex;justify-content: center;align-items: center;">
-                        <img src="/assets/images/inspire.jpg"
-                            style="max-width: 90%;max-height:35vh;display:block;padding: 1rem; border-radius:1rem "
-                            alt="">
-                    </div>
-                    <div class="col-8">
-                        <div style="padding: 1rem">
-                            <h3 id="creatorname">Name</h3>
-                            <hr>
-                            <p id="fullstory">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque
-                                ad, excepturi
-                                adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus
-                                perspiciatis consectetur odio quo alias quia voluptatem!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
+    </div>
 
     <section>
 
@@ -67,10 +44,40 @@
     <script>
         function displayStory(storyID) {
             $.get('/story/id/' + storyID, (story, status) => {
+
+                $("#showstories").html(`<section class="testimonial-page py-5">
+
+<div class="row"
+    style="height: 40vh;background-color: rgb(255, 255, 255);width: 100vw;display: flex;justify-content:center;align-items: center;">
+    <div
+        style="background-color:#ff0558;height: 90%;width: 90%;border-radius: 1rem;box-shadow: 0.5rem 0.5rem 1rem gray;color: white;">
+        <div class="row" id="stories">
+            <div class="col-3" style="display: flex;justify-content: center;align-items: center;">
+                <img id="storyimage" src="/assets/images/inspire.jpg"
+                    style="max-width: 90%;max-height:35vh;display:block;padding: 1rem; border-radius:1rem "
+                    alt="">
+            </div>
+            <div class="col-8">
+                <div style="padding: 1rem;">
+                    <h3 id="creatorname">Name</h3>
+                    <hr>
+                    <p id="fullstory" style="height:24vh;overflow-y:scroll;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque
+                        ad, excepturi
+                        adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus
+                        perspiciatis consectetur odio quo alias quia voluptatem!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>`);
                 $("#creatorname").html(story.creator)
                 $("#fullstory").html(story.story)
-                window.location.href="#websitename";
+                $("#storyimage").attr('src', '/stories/images/' + story.imageAddress);
+                window.location.href = "#websitename";
             });
+
 
         }
         $(document).ready(function () {
