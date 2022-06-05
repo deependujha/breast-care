@@ -28,8 +28,8 @@ app.get('/yourstory', (req, res) => {
   res.render('yourstory');
 })
 
-app.get('/testimonials', (req, res) => {
-  res.render('testimonials');
+app.get('/stories', (req, res) => {
+  res.render('stories');
 })
 
 app.get('/testimonials/list',async(req,res)=>{
@@ -58,8 +58,8 @@ app.get('/know-more',(req,res)=>{
   res.render('know-more');
 })
 
-app.get('/Questions-asked-frequently',(req,res)=>{
-  res.render('QnA');
+app.get('/faqs',(req,res)=>{
+  res.render('faqs');
 })
 
 app.listen(port, () => {

@@ -1,23 +1,46 @@
 <html lang="en">
-{{>head}}
+
+<head>
+  {{>head}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <style>
+    .qicon {
+      width: 1.5rem;
+    }
+  </style>
+</head>
 
 <body>
-  <div>
+  {{>navbar}}
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>
+          Breast Cancer
+        </h1>
+        <p>
+          Breast cancer happens when cells in your breast grow and divide in an
+          uncontrolled way, creating a mass of tissue called a tumor. Signs of
+          breast cancer can include feeling a lump in your breast, experiencing a
+          change in the size of your breast and seeing changes to the skin on your
+          breasts. Mammograms can help with early detection.
+        </p>
+      </div>
+      <div class="col">
+        <img src="/assets/images/breast-cancer.jpg" style="max-height: 40vh" class="img2" alt="...">
 
-    <h1>
-      Breast Cancer
-    </h1>
-    <p>
-      Breast cancer happens when cells in your breast grow and divide in an
-      uncontrolled way, creating a mass of tissue called a tumor. Signs of
-      breast cancer can include feeling a lump in your breast, experiencing a
-      change in the size of your breast and seeing changes to the skin on your
-      breasts. Mammograms can help with early detection.
-    </p>
-    <img src="/assets/images/breast-cancer.jpg" class="img2" alt="...">
+      </div>
+
+    </div>
+
     <div>
+      <hr>
       <h2>
-        Who is mainly affected by breast cancer?
+        <img src="/assets/icons/arrow.png" alt="" class="qicon">Who is mainly affected by breast cancer?
       </h2>
       Breast cancer is one of the most common cancers among women, second only to skin cancer. It’s most likely to
       affect women over the age of 50.
@@ -27,117 +50,126 @@
 
       Transgender women are more likely to develop breast cancer compared to cisgender men. Additionally, transgender
       men are less likely to develop breast cancer compared to cisgender women.
-
-      <h2>
+      <hr>
+      <h2><img src="/assets/icons/arrow.png" alt="" class="qicon">
         What age does breast cancer occur?
       </h2>
       Breast cancer is most often diagnosed in adults over the age of 50, but it can occur at any age.
     </div>
+    <div>
+      <hr>
+      <h2><img src="/assets/icons/arrow.png" alt="" class="qicon">
+        How common is breast cancer?
+      </h2>
+      In the United States, breast cancer is the second-leading cause of cancer death in women, after lung cancer. It’s
+      also the leading cause of cancer death among women ages 35 to 54.
+    </div>
+    <div>
+      <hr>
+      <h2> <img src="/assets/icons/arrow.png" alt="" class="qicon">What are the early signs of breast cancer?</h2>
+      Breast cancer symptoms can vary for each person. Possible signs of breast cancer include:
+      <ul>
+        <li>A change in the size, shape or contour of your breast.</li>
+        <li>A mass or lump, which may feel as small as a pea.</li>
+        <li>A lump or thickening in or near your breast or in your underarm that persists through your menstrual cycle.
+        </li>
+        <li>A change in the look or feel of your skin on your breast or nipple (dimpled, puckered, scaly or inflamed).
+        </li>
+        <li>Redness of your skin on your breast or nipple.</li>
+        <li>An area that’s distinctly different from any other area on either breast.</li>
+        <li>A marble-like hardened area under your skin.</li>
+        <li>A blood-stained or clear fluid discharge from your nipple.</li>
+      </ul>
+      Some people don’t notice any signs of breast cancer at all. That’s why routine mammograms and are so important.
+      <hr>
+      <h2> <img src="/assets/icons/arrow.png" alt="" class="qicon">What causes breast cancer?</h2>
+      Breast cancer develops when abnormal cells in your breast divide and multiply. But experts don’t know exactly what
+      causes this process to begin in the first place.
 
+      However, research indicates that are several risk factors that may increase your chances of developing breast
+      cancer. These include:
+      <ul>
+        <li><b>Age</b>: Being 55 or older increases your risk for breast cancer.</li>
+        <li><b> Sex</b>:Women are much more likely to develop breast cancer than men.</li>
+        <li> <b> Family history and genetics</b>: If you have parents, siblings, children or other close relatives
+          who’ve
+          been diagnosed
+          with breast cancer, you’re more likely to develop the disease at some point in your life. About 5% to 10% of
+          breast
+          cancers are due to single abnormal genes that are passed down from parents to children, and that can be
+          discovered
+          by genetic testing.</li>
+        <li> <b>Smoking</b>: Tobacco use has been linked to many different types of cancer, including breast cancer.
+        </li>
+        <li> <b>Alcohol use</b>: Research indicates that drinking alcohol can increase your risk for certain types of
+          breast cancer.</li>
+        <li> <b>Obesity</b>: Having obesity can increase your risk of breast cancer and breast cancer recurrence.</li>
+        Radiation exposure. If you’ve had prior radiation therapy — especially to your head, neck or chest — you’re more
+        likely to develop breast cancer.</li>
+        <li><b>Hormone replacement therapy</b>: People who use hormone replacement therapy (HRT) have a higher risk of
+          being diagnosed
+          with breast cancer.</li>
+      </ul>
+      There are many other factors that can increase your chances of developing breast cancer. Talk to your healthcare
+      provider to find out if you’re at risk.
+      <hr>
+      <h2> <img src="/assets/icons/arrow.png" alt="" class="qicon">What are the breast cancer stages?</h2>
+      Staging helps describe how much cancer is in your body. It’s determined by several factors, including the size and
+      location of the tumor and whether the cancer has spread to other areas of your body. The basic breast cancer
+      stages
+      are:
+
+      <ul></ul>
+      <li><b>Stage 0</b>: The disease is non-invasive. This means it hasn’t broken out of your breast ducts.</li>
+      <li><b>Stage I</b>: The cancer cells have spread to the nearby breast tissue.</li>
+      <li><b>Stage II</b>:The tumor is either smaller than 2 centimeters across and has spread to underarm lymph
+        nodes or larger
+        than 5 centimeters across but hasn’t spread to underarm lymph nodes. Tumors at this stage can measure anywhere
+        between 2 to 5 centimeters across, and may or may not affect the nearby lymph nodes.</li>
+      <li><b>Stage III</b>: At this stage, the cancer has spread beyond the point of origin. It may have invaded nearby
+        tissue
+        and
+        lymph nodes, but it hasn’t spread to distant organs. Stage III is usually referred to as locally advanced breast
+        cancer.</li>
+      <li><b>Stage IV</b>: The cancer has spread to areas away from your breast, such as your bones, liver, lungs or
+        brain. Stage
+        IV
+        breast cancer is also called metastatic breast cancer.</li>
+      </ul>
+      <hr>
+      <h2> <img src="/assets/icons/arrow.png" alt="" class="qicon">How is breast cancer diagnosed?</h2>
+      Your healthcare provider will perform a breast examination and ask about your family history, medical history and
+      any existing symptoms. Your healthcare provider will also recommend tests to check for breast abnormalities. These
+      tests may include:
+      <ul>
+        <li><b>Mammogram</b>: These special X-ray images can detect changes or abnormal growths in your breast. A
+          mammogram is
+          commonly used in breast cancer prevention.</li>
+        <li><b>Ultrasonography</b>: This test uses sound waves to take pictures of the tissues inside of your breast.
+          It’s
+          used
+          to help diagnose breast lumps or abnormalities.</li>
+        <li><b>Positron emission tomography (PET) scanning</b>: A PET scan uses special dyes to highlight suspicious
+          areas.
+          During this test, your healthcare provider injects a special dye into your veins and takes images with the
+          scanner.</li>
+        <li><b>Magnetic resonance imaging (MRI)</b>: This test uses magnets and radio waves to produce clear, detailed
+          images of
+          the structures inside of your breast.</li>
+      </ul>
+      If your healthcare provider sees anything suspicious on the imaging tests, they may take a biopsy of your breast
+      tissue. They’ll send the sample to a pathology lab for analysis.
+    </div>
+    <hr>
+    <p class="my-4">For more info, please visit here:<a
+        href="https://www.cancer.org/cancer/breast-cancer/about/what-is-breast-cancer.html" target="_blank"> Breast
+        Cancer</a></p>
+    <h2 style="font-family: 'Dancing Script', cursive;margin-bottom: 5rem;color: #ff2a4f;text-align: center;">Fight Like
+      a Girl!</h2>
   </div>
-  <div>
-    <h2>
-      How common is breast cancer?
-    </h2>
-    In the United States, breast cancer is the second-leading cause of cancer death in women, after lung cancer. It’s
-    also the leading cause of cancer death among women ages 35 to 54.
-  </div>
-  <div>
-    <h2>What are the early signs of breast cancer?</h2>
-    Breast cancer symptoms can vary for each person. Possible signs of breast cancer include:
-    <ul>
-      <li>A change in the size, shape or contour of your breast.</li>
-      <li>A mass or lump, which may feel as small as a pea.</li>
-      <li>A lump or thickening in or near your breast or in your underarm that persists through your menstrual cycle.
-      </li>
-      <li>A change in the look or feel of your skin on your breast or nipple (dimpled, puckered, scaly or inflamed).
-      </li>
-      <li>Redness of your skin on your breast or nipple.</li>
-      <li>An area that’s distinctly different from any other area on either breast.</li>
-      <li>A marble-like hardened area under your skin.</li>
-      <li>A blood-stained or clear fluid discharge from your nipple.</li>
-    </ul>
-    Some people don’t notice any signs of breast cancer at all. That’s why routine mammograms and are so important.
 
-    <h2> What causes breast cancer?</h2>
-    Breast cancer develops when abnormal cells in your breast divide and multiply. But experts don’t know exactly what
-    causes this process to begin in the first place.
 
-    However, research indicates that are several risk factors that may increase your chances of developing breast
-    cancer. These include:
-    <ul>
-      <li><b>Age</b>: Being 55 or older increases your risk for breast cancer.</li>
-      <li><b> Sex</b>:Women are much more likely to develop breast cancer than men.</li>
-      <li> <b> Family history and genetics</b>: If you have parents, siblings, children or other close relatives who’ve
-        been diagnosed
-        with breast cancer, you’re more likely to develop the disease at some point in your life. About 5% to 10% of
-        breast
-        cancers are due to single abnormal genes that are passed down from parents to children, and that can be
-        discovered
-        by genetic testing.</li>
-      <li> <b>Smoking</b>: Tobacco use has been linked to many different types of cancer, including breast cancer.</li>
-      <li> <b>Alcohol use</b>: Research indicates that drinking alcohol can increase your risk for certain types of
-        breast cancer.</li>
-      <li> <b>Obesity</b>: Having obesity can increase your risk of breast cancer and breast cancer recurrence.</li>
-      Radiation exposure. If you’ve had prior radiation therapy — especially to your head, neck or chest — you’re more
-      likely to develop breast cancer.</li>
-      <li><b>Hormone replacement therapy</b>: People who use hormone replacement therapy (HRT) have a higher risk of
-        being diagnosed
-        with breast cancer.</li>
-    </ul>
-    There are many other factors that can increase your chances of developing breast cancer. Talk to your healthcare
-    provider to find out if you’re at risk.
 
-    <h2>What are the breast cancer stages?</h2>
-    Staging helps describe how much cancer is in your body. It’s determined by several factors, including the size and
-    location of the tumor and whether the cancer has spread to other areas of your body. The basic breast cancer stages
-    are:
-
-    <ul></ul>
-    <li><b>Stage 0</b>: The disease is non-invasive. This means it hasn’t broken out of your breast ducts.</li>
-    <li><b>Stage I</b>: The cancer cells have spread to the nearby breast tissue.</li>
-    <li><b>Stage II</b>:The tumor is either smaller than 2 centimeters across and has spread to underarm lymph
-      nodes or larger
-      than 5 centimeters across but hasn’t spread to underarm lymph nodes. Tumors at this stage can measure anywhere
-      between 2 to 5 centimeters across, and may or may not affect the nearby lymph nodes.</li>
-    <li><b>Stage III</b>: At this stage, the cancer has spread beyond the point of origin. It may have invaded nearby
-      tissue
-      and
-      lymph nodes, but it hasn’t spread to distant organs. Stage III is usually referred to as locally advanced breast
-      cancer.</li>
-    <li><b>Stage IV</b>: The cancer has spread to areas away from your breast, such as your bones, liver, lungs or
-      brain. Stage
-      IV
-      breast cancer is also called metastatic breast cancer.</li>
-    </ul>
-
-    <h2>How is breast cancer diagnosed?</h2>
-    Your healthcare provider will perform a breast examination and ask about your family history, medical history and
-    any existing symptoms. Your healthcare provider will also recommend tests to check for breast abnormalities. These
-    tests may include:
-    <ul>
-      <li><b>Mammogram</b>: These special X-ray images can detect changes or abnormal growths in your breast. A
-        mammogram is
-        commonly used in breast cancer prevention.</li>
-      <li><b>Ultrasonography</b>: This test uses sound waves to take pictures of the tissues inside of your breast. It’s
-        used
-        to help diagnose breast lumps or abnormalities.</li>
-      <li><b>Positron emission tomography (PET) scanning</b>: A PET scan uses special dyes to highlight suspicious
-        areas.
-        During this test, your healthcare provider injects a special dye into your veins and takes images with the
-        scanner.</li>
-      <li><b>Magnetic resonance imaging (MRI)</b>: This test uses magnets and radio waves to produce clear, detailed
-        images of
-        the structures inside of your breast.</li>
-    </ul>
-    If your healthcare provider sees anything suspicious on the imaging tests, they may take a biopsy of your breast
-    tissue. They’ll send the sample to a pathology lab for analysis.
-  </div>
-
-  <p class="my-4">For more info, please visit here:<a
-      href="https://www.cancer.org/cancer/breast-cancer/about/what-is-breast-cancer.html" target="_blank">Breast
-      Cancer</a></p>
-  <h2>Fight Like a Girl!</h2>
 </body>
 
 </html>
