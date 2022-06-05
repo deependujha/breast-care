@@ -70,16 +70,19 @@ app.post('/yourstory', async (req, res) => {
       story: req.body.story,
       createdon: Date.now()
     });
-    var image = req.files.image;
-    var filename = "";
-    if (image.mimetype == 'image/jpeg') {
-      filename = mongoose.Types.ObjectId() + '.jpeg';
-    } else {
-      filename = mongoose.Types.ObjectId() + '.png';
+    if (req.files) {
+      if (req.files.image) {
+        var image = req.files.image;
+        var filename = "";
+        if (image.mimetype == 'image/jpeg') {
+          filename = mongoose.Types.ObjectId() + '.jpeg';
+        } else {
+          filename = mongoose.Types.ObjectId() + '.png';
+        }
+        image.mv(path.join(__dirname, "public/stories/images", filename));
+        story.imageAddress = filename;
+      }
     }
-    image.mv(path.join(__dirname, "public/stories/images", filename));
-    story.imageAddress = filename;
-    // console.log(story);
     await story.save();
     res.redirect('/stories')
   } catch (error) {
