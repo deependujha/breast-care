@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/yourstory', (req, res) => {
-  res.render('form');
+  res.render('yourstory');
 })
 
 app.get('/testimonials', (req, res) => {
