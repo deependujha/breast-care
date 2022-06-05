@@ -104,9 +104,9 @@
                         ImageAddress = "/stories/images/" + story.imageAddress;
                     }
                     i++;
-                    $("#testimonials" + j).append(`<div id="${story._id}" onclick='displayStory("${story._id}")' class="card mx-3" style="border-radius: 5px;  height: 25rem;padding:1rem">
+                    $("#testimonials" + j).append(`<div id="${story._id}" onclick='displayStory("${story._id}")' class="card mx-3" style="border-radius: 1rem;  height: 25rem;padding:1rem">
                     <img src="${ImageAddress}" class="card-img2" alt="loading..."
-                        style="border-radius: 100px;margin:0 auto;">
+                        style="border-radius: 50%;margin:0 auto;">
                     <div class="card-body" style="overflow:hidden">
                         <h5 class="card-title">${story.creator}</h5>
                         <p class="card-text">${story.age}, ${story.occupation}</p>
