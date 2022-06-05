@@ -28,6 +28,10 @@ app.get('/yourstory', (req, res) => {
   res.render('form');
 })
 
+app.get('/testimonials', (req, res) => {
+  res.render('testimonials');
+})
+
 app.post('/yourstory', async (req, res) => {
   try {
     console.log(req.body);
