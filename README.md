@@ -40,6 +40,7 @@ Dataset used for modeling is `Breast cancer wisconsin (diagnostic) dataset`.
  - Creator:  Dr. William H. Wolberg, W. Nick Street, Olvi L. Mangasarian
  - Donor: Nick Street
  - Date: November, 1995
+#### SK-learn
 This dataset is present in Sci-kit Learn module and the logistic regression used uses 'binary cross entropy(log loss)' as loss function. The model predicts 0 or 1.
  * 0 stands for Malignant
  * 1 stands for Benign
