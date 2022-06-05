@@ -43,11 +43,9 @@ app.get('/testimonials/list',async(req,res)=>{
 
 app.post('/yourstory', async (req, res) => {
   try {
-    console.log(req.body);
     const story=await new Stories(req.body);
     story.save();
-    console.log(story);
-    res.render('yourstory')
+    res.redirect('/stories')
   } catch (error) {
 
   }
