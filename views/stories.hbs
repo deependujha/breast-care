@@ -11,8 +11,13 @@
 
         img {
             cursor: pointer;
+            background-color: white;
         }
 
+        .sc1::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
     </style>
 </head>
 
@@ -26,7 +31,7 @@
     <section>
 
         <div class="container py-5 card_testimonial text-center" style="text-overflow:ellipsis;">
-            <h3 class="text-center fw-bold text-white">Meet Our Warriers </h3>
+            <h3 class="text-center fw-bold text-white">Meet Our Warriors </h3>
             <div class="card-group my-4 text-center py-5" id="testimonials1">
 
             </div>
@@ -59,12 +64,10 @@
             </div>
             <div class="col-8">
                 <div style="padding: 1rem;">
-                    <h3 id="creatorname">Name</h3>
+                    <h3 id="creatorname">${story.creator}</h3>
+                    <p>${story.age}, ${story.occupation}</p>
                     <hr>
-                    <p id="fullstory" style="height:24vh;overflow-y:scroll;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque
-                        ad, excepturi
-                        adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus
-                        perspiciatis consectetur odio quo alias quia voluptatem!</p>
+                    <p id="fullstory" class="sc1" style="height:20vh;overflow-y:scroll;">${story.story}</p>
                 </div>
             </div>
         </div>
@@ -72,8 +75,6 @@
 </div>
 
 </section>`);
-                $("#creatorname").html(story.creator)
-                $("#fullstory").html(story.story)
                 $("#storyimage").attr('src', '/stories/images/' + story.imageAddress);
                 window.location.href = "#websitename";
             });
