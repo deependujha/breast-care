@@ -8,7 +8,8 @@
         .card {
             cursor: pointer;
         }
-        img{
+
+        img {
             cursor: pointer;
         }
     </style>
@@ -23,7 +24,7 @@
             style="height: 40vh;background-color: rgb(255, 255, 255);width: 100vw;display: flex;justify-content:center;align-items: center;">
             <div
                 style="background-color:#ff0558;height: 90%;width: 90%;border-radius: 1rem;box-shadow: 0.5rem 0.5rem 1rem gray;color: white;">
-                <div class="row">
+                <div class="row" id="stories">
                     <div class="col-3" style="display: flex;justify-content: center;align-items: center;">
                         <img src="/assets/images/inspire.jpg"
                             style="max-width: 90%;max-height:35vh;display:block;padding: 1rem; border-radius:1rem "
@@ -31,9 +32,10 @@
                     </div>
                     <div class="col-8">
                         <div style="padding: 1rem">
-                            <h3>Name</h3>
+                            <h3 id="creatorname">Name</h3>
                             <hr>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque ad, excepturi
+                            <p id="fullstory">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias cumque
+                                ad, excepturi
                                 adipisci quidem reiciendis nobis rem consectetur? Dolores tenetur quidem laborum natus
                                 perspiciatis consectetur odio quo alias quia voluptatem!</p>
                         </div>
@@ -63,15 +65,28 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
+        function displayStory(storyID) {
+            $.get('/story/id/' + storyID, (story, status) => {
+                $("#creatorname").html(story.creator)
+                $("#fullstory").html(story.story)
+                window.location.href="#websitename";
+            });
+
+        }
         $(document).ready(function () {
-            $.get('/testimonials/list', (data, status) => {
+            $.get('/stories/list', (data, status) => {
                 var lengthOfStories = data.length;
                 var i = 0,
                     j = 1;
+                ImageAddress = "/assets/images/logo.png";
+
                 data.forEach(story => {
+                    if (story.imageAddress) {
+                        ImageAddress = "/stories/images/" + story.imageAddress;
+                    }
                     i++;
-                    $("#testimonials" + j).append(`<div class="card mx-3" style="border-radius: 5px;  height: 25rem;padding:1rem">
-                    <img src="/assets/images/inspire.jpg" class="card-img2" alt="loading..."
+                    $("#testimonials" + j).append(`<div id="${story._id}" onclick='displayStory("${story._id}")' class="card mx-3" style="border-radius: 5px;  height: 25rem;padding:1rem">
+                    <img src="${ImageAddress}" class="card-img2" alt="loading..."
                         style="border-radius: 100px;margin:0 auto;">
                     <div class="card-body" style="overflow:hidden">
                         <h5 class="card-title">${story.creator}</h5>
@@ -83,7 +98,7 @@
                         j++;
                         $(".card_testimonial").append(
                             `<div class="card-group my-4 text-center py-5" style="background-color: #cb4c81" id="testimonials${j}"></div>`
-                            );
+                        );
                     }
                 });
 
